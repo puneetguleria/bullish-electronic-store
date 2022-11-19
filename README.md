@@ -11,3 +11,8 @@
 3. Run the application
 
    ```gradle bootRun```
+   
+   
+# 
+Have skipped quite a few validation to keep the scope of the exercise shorter.
+But have added a validator implementation on ProductService for an example    
