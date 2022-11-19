@@ -1,0 +1,222 @@
+{
+	"info": {
+		"_postman_id": "4e427935-b621-4d7f-ae09-bda171d64456",
+		"name": "Puneet-Bullish",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20845192"
+	},
+	"item": [
+		{
+			"name": "Create Basket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/baskets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"baskets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Product-1\",\r\n  \"price\": 1976.34\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a Product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Product-1\",\r\n  \"price\": 1976.34\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/products/640e5163-12d7-4e5c-85ab-7b3ecdf3df1e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"products",
+						"640e5163-12d7-4e5c-85ab-7b3ecdf3df1e"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Discount Deal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"productCode\":\"4fa13f1b-26ca-41a6-a586-392193138625\",\r\n  \"discountType\": \"PERCENTAGE\",\r\n  \"dealType\": \"FLAT_OFF\",\r\n  \"rate\": 15.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/discount-deals",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"discount-deals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add-product-to-basket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"productCode\":\"640e5163-12d7-4e5c-85ab-7b3ecdf3df1e\",\r\n   \"quantity\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/baskets/dde783e1-4ebb-4b6d-b1bb-976f97ccf943/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"baskets",
+						"dde783e1-4ebb-4b6d-b1bb-976f97ccf943",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add-product-to-basket Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"productCode\":\"640e5163-12d7-4e5c-85ab-7b3ecdf3df1e\",\r\n   \"quantity\":2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/baskets/dde783e1-4ebb-4b6d-b1bb-976f97ccf943/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"baskets",
+						"dde783e1-4ebb-4b6d-b1bb-976f97ccf943",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Basket",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/baskets/dde783e1-4ebb-4b6d-b1bb-976f97ccf943",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"baskets",
+						"dde783e1-4ebb-4b6d-b1bb-976f97ccf943"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
